@@ -24,11 +24,11 @@ public class MilkingRobot {
         this.tank = tank;
     }
   
-    public void milk(Milkable milkable){
+    public void milk(Milkable milkable) throws Exception{
         try{
             tank.addToTank(milkable.milk());
         } catch (Exception e){
-            throw new IllegalArgumentException("No tank has been fixed");
+            throw new IllegalStateException("No tank has been fixed");
         }
         tank.addToTank(milkable.milk());
     }
