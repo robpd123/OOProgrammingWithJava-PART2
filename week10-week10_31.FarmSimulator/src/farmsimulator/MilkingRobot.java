@@ -24,7 +24,7 @@ public class MilkingRobot {
         this.tank = tank;
     }
   
-    public void milk(Milkable milkable) throws Exception{
+    public void milk(Milkable milkable){
         try{
             tank.addToTank(milkable.milk());
         } catch (Exception e){
